@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const DropDownContainer = styled("div")`
   width: 10.5em;
   cursor: pointer;
-  position: absolute;
-  z-index: 100;
 `;
 
 export const Header = styled("div")`
