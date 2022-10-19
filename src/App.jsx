@@ -28,6 +28,7 @@ export const BloodGroupContainer = styled("div")`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 80px;
+  z-index: 100;
   // row-gap: 20px;
 `;
 
