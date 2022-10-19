@@ -23,7 +23,7 @@ function App() {
       </MainContainer>
       <BloodGroupContainer>
         {Object.keys(BLOOD_TYPES).map((group) => (
-          <BloodGroup key={group} group={group} groups={BLOOD_TYPES[group]} />
+          <BloodGroup key={group} group={group} />
         ))}
       </BloodGroupContainer>
     </Container>

@@ -4,22 +4,26 @@ import Person from "../../utilities/person-outline.png";
 import { useContext, useEffect, useState } from "react";
 import BLOOD_TYPES from "../../utilities/BLOOD_TYPES";
 
-const BloodGroup = ({ group, groups }) => {
+const BloodGroup = ({ group }) => {
   const [isActive, setGroup] = useState(false);
   const { chosenGroup } = useContext(BloodTypeContext);
-  useEffect(() => {
-    console.log(BLOOD_TYPES[chosenGroup], groups);
-    if (BLOOD_TYPES[chosenGroup] === groups) {
-      console.log("TRUE");
-      setGroup(true);
-    }
-  });
+  console.log(BLOOD_TYPES[chosenGroup]);
+  //   useEffect(() => {
+  //     if (BLOOD_TYPES[chosenGroup].includes(group)) {
+  //       console.log("TRUE");
+  //       setGroup(true);
+  //     }
+  //   }, [chosenGroup]);
   return (
     <>
       <BloodGroupDiv>
         <img src={Person} />
         <h1>{group}</h1>
-        {isActive ? <Liquid></Liquid> : <Background></Background>}
+        {BLOOD_TYPES[chosenGroup].includes(group) ? (
+          <Liquid></Liquid>
+        ) : (
+          <Background></Background>
+        )}
       </BloodGroupDiv>
     </>
   );
