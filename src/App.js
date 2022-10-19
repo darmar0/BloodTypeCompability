@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  MainContainer,
+  Container,
+  Wrapper,
+  BloodGroupContainer,
+} from "./App.jsx";
+import BLOOD_TYPES from "./utilities/BLOOD_TYPES";
+import Dropdown from "./components/dropdown/dropdown.component";
+import BloodContainer from "./components/blood-container/blood.container.component.jsx";
+import BloodGroup from "./components/blood-group/blood-group.component.jsx";
 
 function App() {
+  // console.log(BLOOD_TYPES);
+  // console.log(Object.keys(BLOOD_TYPES).map((i) => BLOOD_TYPES[i]));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <MainContainer>
+        <h1>WHO THE BLOOD IS FOR</h1>
+        <Dropdown options={Object.keys(BLOOD_TYPES)} />
+        <Wrapper>
+          <BloodContainer />
+        </Wrapper>
+      </MainContainer>
+      <BloodGroupContainer>
+        {Object.keys(BLOOD_TYPES).map((group) => (
+          <BloodGroup key={group} group={group} groups={BLOOD_TYPES[group]} />
+        ))}
+      </BloodGroupContainer>
+    </Container>
   );
 }
 
