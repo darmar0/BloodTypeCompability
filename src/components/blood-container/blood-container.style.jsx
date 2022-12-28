@@ -20,9 +20,10 @@ export const Liquid = styled("div")`
   border-radius: 45%;
   bottom: 86%;
   left: -32%;
+  animation-fill-mode: forwards;
   animation-name: ${LiquidAnimation};
   animation-duration: 8s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   z-index: 100;
 `;
 export const BloodContainerBox = styled("div")`

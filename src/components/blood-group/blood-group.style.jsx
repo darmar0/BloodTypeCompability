@@ -12,7 +12,6 @@ spin {
 
 export const BloodGroupDiv = styled("div")`
   width: 100px;
-  //   min-height: 200px;
   background-color: #cc1100;
   display: flex;
   justify-content: center;
@@ -26,10 +25,11 @@ export const BloodGroupDiv = styled("div")`
     z-index: 2;
   }
   h1 {
-    color: black;
-    font-size: 35px;
+    color: white;
+    font-size: 30px;
     position: absolute;
     z-index: 2;
+    padding-bottom: 2.5rem;
   }
 `;
 export const Liquid = styled("div")`
@@ -42,9 +42,10 @@ export const Liquid = styled("div")`
   border-radius: 45%;
   //   bottom: 86%;
   //   left: -32%;
+  animation-fill-mode: forwards;
   animation-name: ${LiquidAnimation};
   animation-duration: 8s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   z-index: 1;
 `;
 export const Background = styled("div")`

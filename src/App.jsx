@@ -21,6 +21,11 @@ export const Container = styled("div")`
   min-height: 100vh;
   min-width: 100wh;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
 `;
 
 export const Wrapper = styled("div")``;
@@ -29,7 +34,7 @@ export const BloodGroupContainer = styled("div")`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 80px;
   z-index: 100;
-  // row-gap: 20px;
+  row-gap: 80px;
 `;
 
 // .main-container {
