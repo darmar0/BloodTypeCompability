@@ -11,50 +11,27 @@
     border: 1px solid white;
     cursor: pointer;
     background: #89dee2;
-    background: linear-gradient(to right, #cc1100 50%, #89dee2 50%) left;
-    background-size: 200%;
-    transition: 4s ease-out;
-    transform: rotate(270deg);
-    &:active {
-      background-position: right;
+    &:hover {
+      background-color: #cc1100;
     }
-
-    &:focus {
-      background-position: right !important;
+    h2 {
+      color: white;
+      text-align: center;
     }
+  }
+  .typePadActive {
+    width: 85px;
+    height: 85px;
+    border: 1px solid white;
+    cursor: pointer;
+    background: #cc1100;
+    transition: all 0.5s linear;
 
     h2 {
       color: white;
       text-align: center;
-      transform: rotate(-270deg);
     }
-
-    // &:active {
-    //   background-color: blue !important;
-    // }
   }
-  //   .typePadClicked {
-  //     width: 85px;
-  //     height: 85px;
-  //     border: 1px solid white;
-  //     cursor: pointer;
-  //     background: #89dee2;
-  //     background: linear-gradient(#89dee2, #cc1100);
-  //     background-repeat: repeat;
-  //     background-size: 100% 200%;
-  //     transition: all 0.5s linear;
-  //     &:focus {
-  //       background-position: 0 -102%;
-  //     }
-  //     // &:active {
-  //     //   background-position: 0 -102%;
-  //     // }
-
-  //     h2 {
-  //       color: white;
-  //       text-align: center;
-  //     }
-  //   }
 
   //////////////////////////////////
   .typePadLiquid {

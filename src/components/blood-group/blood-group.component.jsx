@@ -5,21 +5,19 @@ import { useContext, useEffect, useState } from "react";
 import BLOOD_TYPES from "../../utilities/BLOOD_TYPES";
 
 const BloodGroup = ({ group }) => {
-  const [isActive, setGroup] = useState(false);
+  const [isActive, setGroup] = useState({});
   const { chosenGroup } = useContext(BloodTypeContext);
-  console.log(BLOOD_TYPES[chosenGroup]);
-  //   useEffect(() => {
-  //     if (BLOOD_TYPES[chosenGroup].includes(group)) {
-  //       console.log("TRUE");
-  //       setGroup(true);
-  //     }
-  //   }, [chosenGroup]);
+  useEffect(() => {
+    setGroup({});
+    setInterval(() => setGroup(group), 1000);
+  }, [chosenGroup, group]);
+
   return (
     <>
       <BloodGroupDiv>
-        <img src={Person} />
+        <img src={Person} alt={group} />
         <h1>{group}</h1>
-        {BLOOD_TYPES[chosenGroup].includes(group) ? (
+        {BLOOD_TYPES[chosenGroup].includes(isActive) ? (
           <Liquid></Liquid>
         ) : (
           <Background></Background>

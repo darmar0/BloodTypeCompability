@@ -1,22 +1,21 @@
 import "./bloodType-picker.style.scss";
-import { useState, useContext, useEffect } from "react";
+import { useContext } from "react";
 import { BloodTypeContext } from "../../context/blood_types.context";
 
 const BloodTypePicker = ({ options }) => {
   const { chosenGroup, setChosenGroup } = useContext(BloodTypeContext);
-  const [isClicked, setClick] = useState(false);
   const onOptionClicked = (type) => () => {
+    console.log("Chosen Group", chosenGroup);
     console.log("OnClick", type);
-    console.log("Click", isClicked);
     setChosenGroup(type);
-    setClick(true);
   };
+  console.log("Chosen Group", chosenGroup);
   return (
     <div className="typePickerWrapper">
       {options.map((type) => (
         <div
-          className="typePad"
-          tabIndex={"2"}
+          className={chosenGroup === type ? "typePadActive" : "typePad"}
+          tabIndex={"1"}
           onClick={onOptionClicked(type)}
           key={Math.random()}
         >

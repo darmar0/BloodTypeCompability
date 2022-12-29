@@ -19,9 +19,9 @@ function App() {
         <h1>WHO THE BLOOD IS FOR</h1>
         {/* <Dropdown options={Object.keys(BLOOD_TYPES)} /> */}
         <BloodTypePicker options={Object.keys(BLOOD_TYPES)} />
-        <Wrapper>
+        {/* <Wrapper>
           <BloodContainer />
-        </Wrapper>
+        </Wrapper> */}
       </MainContainer>
       <BloodGroupContainer>
         {Object.keys(BLOOD_TYPES).map((group) => (

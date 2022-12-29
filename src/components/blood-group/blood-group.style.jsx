@@ -38,10 +38,7 @@ export const Liquid = styled("div")`
   height: 255px;
   width: 255px;
   background: #89dee2;
-  //   background: blue;
   border-radius: 45%;
-  //   bottom: 86%;
-  //   left: -32%;
   animation-fill-mode: forwards;
   animation-name: ${LiquidAnimation};
   animation-duration: 8s;
