@@ -9,7 +9,7 @@ const BloodGroup = ({ group }) => {
   const { chosenGroup } = useContext(BloodTypeContext);
   useEffect(() => {
     setGroup({});
-    setInterval(() => setGroup(group), 1000);
+    setInterval(() => setGroup(group), 100);
   }, [chosenGroup, group]);
 
   return (
