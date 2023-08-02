@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+import { devices } from "../../utilities/breakPoints";
 
 const LiquidAnimation = keyframes`
 spin {
@@ -11,7 +12,6 @@ spin {
 `;
 
 export const BloodGroupDiv = styled("div")`
-  width: 100px;
   background-color: #cc1100;
   display: flex;
   justify-content: center;
@@ -20,16 +20,63 @@ export const BloodGroupDiv = styled("div")`
   overflow: hidden;
   position: relative;
   img {
-    width: 100px;
     position: relative;
     z-index: 2;
   }
   h1 {
     color: white;
-    font-size: 30px;
     position: absolute;
     z-index: 2;
-    padding-bottom: 2.5rem;
+  }
+  @media only screen and ${devices.xs} {
+    width: 50px;
+    img {
+      width: 50px;
+    }
+    h1 {
+      font-size: 18px;
+      padding-bottom: 1.5rem;
+    }
+  }
+  @media only screen and ${devices.sm} {
+    width: 70px;
+    img {
+      width: 70px;
+    }
+    h1 {
+      font-size: 20px;
+      padding-bottom: 2.5rem;
+    }
+  }
+  @media only screen and ${devices.md} {
+    width: 80px;
+    img {
+      width: 80px;
+    }
+    h1 {
+      font-size: 20px;
+      padding-bottom: 2.5rem;
+    }
+  }
+  @media only screen and ${devices.lg} {
+    width: 80px;
+    img {
+      width: 80px;
+    }
+    h1 {
+      font-size: 20px;
+      padding-bottom: 2.5rem;
+    }
+  }
+  @media only screen and ${devices.xl} {
+    width: 100px;
+    img {
+      width: 100px;
+    }
+    h1 {
+      font-size: 30px;
+      padding-bottom: 2.5rem;
+    }
   }
 `;
 export const Liquid = styled("div")`
