@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { devices, devicess } from "./utilities/breakPoints";
+import { devices } from "./utilities/breakPoints";
 
 export const MainContainer = styled("div")`
   padding: 3rem;
