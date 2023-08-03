@@ -1,12 +1,21 @@
-const BLOOD_TYPES = {
-  "0+": ["B+", "AB+"],
-  "0-": ["B+", "AB+"],
+const BLOOD_TYPES_DONATE = {
+  "0+": ["B+", "AB+", "A+", "0+"],
+  "0-": ["B+", "AB+", "A+", "A-", "0+", "0-", "B-", "AB-"],
   "A+": ["A+", "AB+"],
   "A-": ["A+", "A-", "AB+", "AB-"],
   "B+": ["B+", "AB+"],
   "B-": ["B+", "B-", "AB+", "AB-"],
-  "AB+": ["B+", "AB+"],
+  "AB+": ["AB+"],
   "AB-": ["B+", "AB+"],
 };
-
-export default BLOOD_TYPES;
+const BLOOD_TYPES_RESIVE = {
+  "0+": ["0+", "0-"],
+  "0-": ["0-"],
+  "A+": ["A+", "A-", "0+", "0-"],
+  "A-": ["0-", "A-"],
+  "B+": ["B+", "B-", "0+", "0-"],
+  "B-": ["B-", "0-"],
+  "AB+": ["B+", "AB+", "A+", "A-", "0+", "0-", "B-", "AB-"],
+  "AB-": ["B-", "0-", "AB-", "A-"],
+};
+export { BLOOD_TYPES_DONATE, BLOOD_TYPES_RESIVE };
